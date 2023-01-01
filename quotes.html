@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <link rel="icon" type="image/x-icon" href="favicon.png">
+    <head>
+        <meta charset="utf-8" />
+           <link rel="stylesheet" href="lili.css">
+        <title>Gaming Podcast</title>
+    </head>
+        <body>
+        <b>Gaming Podcast Quotes</b>
+        <br> <br>
+                <div id="textContainer"></div>
+                <script src="randomizeText.js"></script>
+
+                <script>
+                    // Get the body element
+                    var body = document.querySelector('body');
+
+                    // Generate a random number between 0 and 255
+                    function getRandomColorValue() {
+                      return Math.floor(Math.random() * 256);
+                    }
+
+                    // Generate a random color in the format 'rgb(r, g, b)'
+                    function getRandomColor() {
+                      var r = getRandomColorValue();
+                      var g = getRandomColorValue();
+                      var b = getRandomColorValue();
+                      return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+                    }
+
+                    // Set the body's background color to a random color
+                    body.style.backgroundColor = getRandomColor();
+                  </script>
+        <button onclick=location=URL>Refresh</button>
+        <button onclick="window.location.href='index.html'">Back to Main Page</button>
+        </body>
+</html>
