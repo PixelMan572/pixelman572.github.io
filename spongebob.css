@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #000; /* Set text color to black */
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 100%; /* Start off-screen to the right */
+    width: 200%; /* Extend the width to cover the entire animation area */
+    height: 100%;
+    z-index: 0;
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/3/33/Patrick_Star.svg/1200px-Patrick_Star.svg.png');
+    background-size: 25%; /* Resize the background image by 25% */
+    background-repeat: no-repeat;
+    animation: moveBackground 25s linear infinite; /* Increased duration to include the pause */
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateX(100%); /* Start off to the right */
+    }
+    50% {
+        transform: translateX(-50%); /* Move halfway to the left */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off to the left */
+    }
+}
